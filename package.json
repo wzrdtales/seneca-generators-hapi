@@ -1,0 +1,20 @@
+{
+  "name": "generator-hapi-seneca",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tobias Gurtzick <magic@wizardtales.com>",
+  "license": "MIT",
+  "files": [
+    "generators"
+  ],
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "crypto-random-string": "^1.0.0",
+    "yeoman-generator": "^2.0.1"
+  }
+}

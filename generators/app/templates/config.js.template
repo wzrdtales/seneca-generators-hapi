@@ -1,0 +1,21 @@
+module.exports = require("rc")("<%- configPrefix %>", {
+  server: {
+    port: 5000,
+      routes: {
+        cors: {
+          origin: ['*']
+        }
+    }
+  },
+  cookies: {
+    cookie: '<%- cookiename %>',
+    password: '<%- cookiepassword %>',
+    isSecure: false,
+    isHttpOnly: true,
+    ttl: 3600000
+  },
+  baseName: "localhost",
+  log: {
+    level: "trace"
+  }
+});
