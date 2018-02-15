@@ -8,7 +8,7 @@ module.exports = class extends Generator {
         type: "input",
         name: "name",
         message: "Your project name",
-        default: this.appname // Default to current folder name
+        default: this.appname.trim().replace(" ", "-") // Default to current folder name
       },
       {
         type: "input",

@@ -108,9 +108,13 @@ function register(cb) {
           _config.host = os.networkInterfaces().eth0[0].address;
         }
 
+        if (config.seneca.bases && config.seneca.bases.indexOf(",")) {
+          config.seneca.bases = config.seneca.bases.split(",");
+        }
+
         server.auth.strategy("session", "cookie", config.cookies);
         server.seneca
-          .use("mesh", Object.assign(config.seneca || {}, _config))
+          .use("mesh-ng", Object.assign(config.seneca || {}, _config))
           .use("seneca-as-promised");
 
         server.seneca.ready(() => {
