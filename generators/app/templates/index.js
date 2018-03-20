@@ -1,7 +1,7 @@
 "use strict";
 
 // Instana Sensor needed to have node functionality in instana
-if (process.env.NODE_ENV === "production") {
+if (process.env.instana) {
   require("instana-nodejs-sensor")();
 }
 
