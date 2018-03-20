@@ -26,7 +26,8 @@ function dnsSeed(seneca, options, bases, next) {
   dns.lookup(
     config.baseName,
     {
-      all: 4
+      all: true,
+      family: 4
     },
     (err, addresses) => {
       let bases = [];
